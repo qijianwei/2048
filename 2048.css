@@ -1,0 +1,60 @@
+h1{
+	margin:0;
+	padding: 0;
+}
+header{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+
+}
+header h1{
+	font-family: arial;
+	font-size: 40px;
+	font-weight: bold;
+}
+header #newgamebtn{
+	display: block;
+	text-decoration: none;
+	background: #8f7a66;
+	width: 130px;
+	height: 40px;
+	color: white;
+	font-weight: bold;
+	line-height: 40px;
+	margin: 0 auto;
+	border-radius: 6px;
+}
+
+#grid-containter{
+	width: 460px;
+	height: 460px;
+	padding: 20px;
+	background: #bbada0;
+	margin: 30px auto;
+	border-radius: 10px;
+
+	position: relative;                          
+}
+
+#grid-containter .grid-cell{
+	width: 100px;
+	height: 100px;
+	background: #cdc0b4;
+	border-radius: 6px;
+
+    position: absolute;
+}
+
+.number-cell{
+  border-radius: 6px;
+
+  font-family: Arial;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+  font-size: 60px;
+
+  position: absolute;
+}
