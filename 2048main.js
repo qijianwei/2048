@@ -191,6 +191,14 @@ document.addEventListener('touchstart',function(){
     startX=event.touches[0].pageX;
     startY=event.touches[0].pageY;
 });
+//发现移动端问题后新添加的  
+//（当手指在屏幕上滑动的时候连续地触发。在这个事件发生期间，调用preventDefault()事件可以阻止滚动。）
+document.addEventListener('touchmove',function(event){
+  
+  event.preventDefault();  
+  event.stopPropagation();
+});
+
 document.addEventListener('touchend',function(){
      endX=event.changedTouches[0].pageX;
      endY=event.changedTouches[0].pageY;
