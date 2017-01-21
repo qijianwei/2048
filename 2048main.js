@@ -72,7 +72,7 @@ function init(){
     updateBoardView();
 }
 
-
+//根据数据更新棋盘页面
 function updateBoardView(){
 
 	$(".number-cell").remove();
@@ -185,12 +185,22 @@ function updateBoardView(){
 
  });
 
-
+//移动端触摸事件监听
 document.addEventListener('touchstart',function(){
 
     startX=event.touches[0].pageX;
     startY=event.touches[0].pageY;
 });
+
+
+//发现移动端问题后新添加的  
+//（当手指在屏幕上滑动的时候连续地触发。在这个事件发生期间，调用preventDefault()事件可以阻止滚动。）
+document.addEventListener('touchmove',function(){
+  
+  event.preventDefault();  
+
+});
+
 document.addEventListener('touchend',function(){
      endX=event.changedTouches[0].pageX;
      endY=event.changedTouches[0].pageY;
