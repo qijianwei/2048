@@ -186,8 +186,8 @@ function updateBoardView(){
  });
 
 //移动端触摸事件监听
-document.addEventListener('touchstart',function(){
-
+document.addEventListener('touchstart',function(event){
+    event.preventDefault();    
     startX=event.touches[0].pageX;
     startY=event.touches[0].pageY;
 });
@@ -201,7 +201,9 @@ document.addEventListener('touchmove',function(event){
   event.stopPropagation();
 });
 
-document.addEventListener('touchend',function(){
+document.addEventListener('touchend',function(event){
+     event.preventDefault();
+	
      endX=event.changedTouches[0].pageX;
      endY=event.changedTouches[0].pageY;
 	 var deltax=endX-startX;
