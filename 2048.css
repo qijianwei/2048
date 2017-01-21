@@ -1,6 +1,9 @@
-h1{
+p,h1{
 	margin:0;
 	padding: 0;
+}
+p{
+  margin: 6px auto;
 }
 header{
 	display: block;
